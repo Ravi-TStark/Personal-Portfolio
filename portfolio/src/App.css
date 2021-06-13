@@ -1,0 +1,377 @@
+html, body{
+  background: #050505;
+}
+
+.App {
+  text-align: center;
+  max-height: 100vh;
+  position: relative;
+  background-color: #050505;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+#circleWhite {
+  background-color: white;
+  display: block;
+  height: calc(2 * 0.5858 * 95vh);
+  width: calc(2 * 0.5858 * 95vh);
+  border-radius: 50%;
+  position: absolute;
+  top: calc(-0.1716*95vh);
+  right: calc(-0.1716*95vh);
+  transform: scale(1.25);
+  transition: transform linear 0.1s;
+}
+
+.App-header {
+  max-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: left;
+}
+
+header a{
+  text-decoration: none;
+  font-size: 0.6em;
+  margin-left: 30px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+header a:hover{
+  text-decoration: underline;
+}
+
+.scrollSnap{
+  scroll-snap-align: start;
+}
+
+#wrapper{
+  max-height: 100vh;
+}
+
+#section0{
+  height: 100vh;
+  position: relative;
+}
+
+#nameMain {
+  font-size: 4.5em;
+  mix-blend-mode: difference;
+  text-align: left;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 10vw;
+  transform: translate(0, -50%);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#section1{
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+#section1ChildrenWrapper{
+  max-height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+#IamA{
+  font-weight: lighter;
+  font-size: 4em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 350px;
+  text-align: right;
+  margin-right: 0.25em;
+}
+
+.whatAmI{
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.whatAmI>span{
+  position: absolute;
+  left: calc(350px);
+  top: 50%;
+  transform: translate(0, -50%);
+  font-weight: 300;
+  line-height: 5em;
+  margin-left: 0.25em;
+  max-width: calc(100vw - 350px - 100px - 0.25em);
+  max-height: 5em;
+  font-size: 4em;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+
+.whatAmI>img{
+  position: absolute;
+  max-width: 40vh;
+  max-height: 40vh;
+  right: -50px;
+  bottom: -50px;
+  opacity: 0.5;
+}
+
+#section1-0{
+  height: 100vh;
+  width: 100vw;
+  color: black;
+}
+
+#section2{
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  color: black;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+
+#section2Wrapper{
+  color: black;
+  transition: opacity ease-out 0.1s;
+  height: 100vh;
+  font-weight: 300;
+}
+
+#info{
+  align-items: center;
+  height: calc(100%);
+  max-height: 100%;
+  color: black;
+  padding-top: 50px;
+  overflow: scroll;
+  box-sizing: content-box;
+  font-size: 3vh;
+  cursor: default;
+}
+
+#awesomeSkills{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0px;
+  right: 0px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  margin-top: 25px;
+  max-height: calc(100vh - 150px);
+  overflow: scroll;
+}
+
+#awesomeSkills::-webkit-scrollbar {
+  display: none;
+}
+
+.skill{
+  display: inline-block;
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  transition: box-shadow linear 0.2s;
+  margin: 15px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.skill:hover{
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  transform: scale(1.05);
+}
+
+.skill>span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  transition: opacity linear 0.2s;
+  color: black;
+  user-select: none;
+}
+
+.skill:hover>span{
+  opacity: 1;
+}
+
+.skill>img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 30px;
+  margin: 0px;
+  outline: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+.chevronButton{
+  height: 60px;
+  width: 60px;
+  outline: none;
+  border: none;
+  padding: 0px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: none;
+  font-size: 1.75em;
+  line-height: 40px;
+  margin: 0px;
+  z-index: 1000;
+}
+
+#selectSkillSpan{
+  display: none;
+}
+
+#section3{
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  color: black;
+  position: relative;
+  background-color: rgb(7, 7, 7);
+}
+
+#section3-1{
+  width: 40vw;
+  height: 100vh;
+  box-sizing: border-box;
+  float: left;
+  padding: 25px;
+  position: relative;
+}
+
+#section3-2{
+  width: 60vw;
+  height: 100vh;
+  box-sizing: border-box;
+  float: right;
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#thankYou{
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: calc(100% - 50px);
+    padding-left: 50px;
+    padding-right: 30px;
+    color: white;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+#endResume{
+  line-height: 1.25em;
+}
+
+#endResume>strong{
+  font-weight: 500;
+  font-size: 1.5em;
+}
+#endResume>span{
+  line-height: 1.75em;
+}

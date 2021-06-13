@@ -1,0 +1,192 @@
+@media screen and (orientation:portrait) {
+    /* For Portrait Tablet PCs */
+    #nameMain {
+        font-size: 3.5em;
+        left: 10vw;
+        right: 10vw;
+    }
+    #circleWhite {
+        height: calc(2 * 0.5858 * 85vw);
+        width: calc(2 * 0.5858 * 85vw);
+        top: auto;
+        bottom: calc(-0.1716*100vw);
+        right: calc(-0.1716*100vw);
+        transform: scale(1.05);
+    }
+    header a {
+        font-size: 0.9em;
+    }
+    #IamA {
+        display: inline-block;
+        top: 32.5%;
+        font-size: 3.5em;
+        width: 100%;
+        text-align: center;
+        margin-right: 0px;
+    }
+    .whatAmI>span {
+        max-width: calc(100vw - 20vw);
+        left: 0px;
+        right: 0px;
+        top: 52.5%;
+        text-align: center;
+        font-size: 3.75em;
+        max-height: none;
+        text-overflow: initial;
+        white-space:normal;
+        line-height: normal;
+        box-sizing: content-box;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        margin-left: 0em;
+    }
+
+    #awesomeSkills{
+        padding-left: 7.5vw;
+        padding-right: 7.5vw;
+        margin-top: 40px;
+        max-height: calc(100vh - 100px);
+    }
+
+    .skill{
+        height: 15vh;
+        width: 15vh;
+    }
+
+    #section3-1{
+        float: none;
+        height: 30vh;
+        width: 100vw;
+    }
+    #section3-2{
+        float: none;
+        height: 70vh;
+        width: 100vw;
+    }
+
+    #thankYou{
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation:portrait) {
+    /* For mobile phones: */
+    #nameMain {
+        font-size: 3.5em;
+        left: 10vw;
+        right: 10vw;
+    }
+    #circleWhite {
+        height: calc(2 * 0.5858 * 100vw);
+        width: calc(2 * 0.5858 * 100vw);
+        top: auto;
+        bottom: calc(-0.1716*95vh);
+        right: calc(-0.1716*95vh);
+        transform: scale(1);
+    }
+    header a {
+        font-size: 0.9em;
+    }
+    #IamA {
+        display: inline-block;
+        top: 32.5%;
+        font-size: 3.5em;
+        width: 100%;
+        text-align: center;
+        margin-right: 0px;
+    }
+    .whatAmI>span {
+        max-width: calc(100vw - 20vw);
+        left: 0px;
+        right: 0px;
+        top: 52.5%;
+        text-align: center;
+        font-size: 3.75em;
+        max-height: none;
+        text-overflow: initial;
+        white-space:normal;
+        line-height: normal;
+        box-sizing: content-box;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        margin-left: 0em;
+    }
+    #awesomeSkills {
+        max-width: 100vw;
+        max-height: calc(25vh + 30px);
+        overflow: auto;
+        white-space: nowrap;
+        padding: 0px;
+        scroll-snap-type: x mandatory;
+        margin-top: 0px;
+    }
+
+    .skill{
+        height: 25vh;
+        width: 25vh;
+        margin: 0px;
+        margin-left: calc((100vw - 25vh)/2);
+        margin-right: calc((100vw - 25vh)/2);
+        scroll-snap-align: center;
+    }
+
+    .skill:hover{
+        box-shadow: none;
+        transform: scale(1);
+    }
+
+    .skill:hover>span{
+        opacity: 0;
+    }
+
+    .chevronButton{
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    
+    .chevronButton:active{
+        color: #949494;
+    }
+
+    #button1{
+        left: 0px;
+    }
+    #button2{
+        right: 0px;
+    }
+
+    #selectSkillSpan{
+        display: inline-block;
+        position: absolute;
+        height: 150px;
+        left: 0;
+        right: 0;
+        top: calc(100vh - 150px);
+        font-size: 1.25em;
+        transition: opacity linear 0.1s;
+    }
+
+    #info{
+        font-size: 3.5vh;
+    }
+
+    #section3-1{
+        float: none;
+        height: 30vh;
+        width: 100vw;
+    }
+
+    #section3-2{
+        float: none;
+        height: 70vh;
+        width: 100vw;
+    }
+
+    #thankYou{
+        text-align: center;
+        font-size: 2em;
+    }
+}
